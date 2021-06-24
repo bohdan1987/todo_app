@@ -1,0 +1,30 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow will install Deno and run tests across stable and canary builds on Windows, Ubuntu and macOS.
+# For more information see: https://github.com/denoland/setup-deno
+
+name: First-Github-actions
+
+on:
+  push:
+    branches: 
+      - master
+    
+jobs:
+  my_testing:
+    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello-Massage
+         run: echo "Hello World from testing job"
+        
+jobs:
+  my_deploy:
+    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello-Massage
+         run: echo "Hello World from deploy job"
