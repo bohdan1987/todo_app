@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello-Massage
-         run: echo "Hello World from testing job"
+        run: echo "Hello World from testing job"
         
 jobs:
   my_deploy:
@@ -27,4 +27,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello-Massage
-         run: echo "Hello World from deploy job"
+        run: echo "Hello World from deploy job"
