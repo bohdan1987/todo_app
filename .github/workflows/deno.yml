@@ -12,7 +12,7 @@ env:
   EB_APPLICATION_NAME      : "Mytodo"
   EB_ENVIRONMENT_NAME      : "Mytodo-env"
   DEPLOY_PAKAGE_NAME       : "todo_app_${{ github.sha }}.zip"
-  AWS_REGION_NAME          : "eu-north-1"
+  AWS_REGION_NAME          : "eu-central-1"
 
 on:
   push:
