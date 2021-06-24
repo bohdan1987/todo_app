@@ -33,12 +33,13 @@ jobs:
         run : zip -r ${{ env.DEPLOY_PAKAGE_NAME }} ./ -x *.git*
   
   
-      - name: Condigure My AWS credentials
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-         aws-access-key-id    : ${{ secrets.ACCESS_KEY_ID }}
-         aws-secret-acsses-key: ${{ secrets.SECRET_ACCESS_KEY }}
-         aws-region           : ${{ env.AWS_REGION_NAME }}
+        
+          aws-access-key-id     : ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region            : ${{ env.AWS_REGION_NAME }}
          
       - name: Copy deployment pakage to S3 buket
         run : aws s3 cp ${{ env.DEPLOY_PAKAGE_NAME }}  s3://${{ env.EB_PAKAGE_S3_BUCKET_NAME }}
