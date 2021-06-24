@@ -21,7 +21,6 @@ jobs:
       - name: Print Hello-Massage
         run: echo "Hello World from testing job"
         
-jobs:
   my_deploy:
     
     runs-on: ubuntu-latest
