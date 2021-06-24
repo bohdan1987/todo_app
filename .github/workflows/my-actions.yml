@@ -23,7 +23,7 @@ jobs:
         
   my_deploy:
     runs-on: ubuntu-latest
-    needs: {my_testing}
+    needs: [my_testing]
         
     steps:
       - name: Print Hello-Massage
