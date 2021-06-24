@@ -1,0 +1,33 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow will install Deno and run tests across stable and canary builds on Windows, Ubuntu and macOS.
+# For more information see: https://github.com/denoland/setup-deno
+
+name: CI-CD-pipeline-to-AWS-ElastickBeanstalk
+env:
+  EB_PAKAGE_S3_BUCKET_NAME : "tolik-todo-app"
+  EB_APPLICATION_NAME      : "Mytodo"
+  EB_ENVIRONMENT_NAME      : "Mytodo-env"
+  DEPLOY_PAKAGE_NAME       : "todo_app_${{ github.sha }}.zip"
+  AWS_REGION_NAME          : "eu-north-1"
+
+on:
+  push:
+    branches: 
+    - master
+  
+jobs:
+  my_ci_part:
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: Git clone our repo
+        uses: actions/checkout@v1
+
+      - name: Create zip deployment pakage
+        run : zip -r ${{ env.DEPLOY_PAKAGE_NAME }} ./ -x *.git*
+        
+        
