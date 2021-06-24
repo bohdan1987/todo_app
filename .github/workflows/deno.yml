@@ -34,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credenrial@v1
         with:
          aws-access-key-id : ${{ secrets.Access_key_ID }}
-         aws-secret-acsses-key: ${{ secret.Secret_access_key }}
+         aws-secret-acsses-key: ${{ secrets.Secret_access_key }}
          aws-region           : ${{ env.AWS_REGION_NAME }}
          
       - name: Copy deployment pakage to S3 buket
