@@ -23,13 +23,16 @@ jobs:
   my_ci_part:
       runs-on: ubuntu-latest
 
+
       steps:
       - name: Git clone our repo
         uses: actions/checkout@v1
 
+
       - name: Create zip deployment pakage
         run : zip -r ${{ env.DEPLOY_PAKAGE_NAME }} ./ -x *.git*
-        
+  
+  
       - name: Condigure My AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
