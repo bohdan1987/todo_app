@@ -70,7 +70,7 @@ jobs:
           
           
       - name: Deploy new ElasticBeanstalk Aplication Version
-        run : aws elasticbeanstalk update-environment -- environment-name ${{ env.EB_ENVIRONMENT_NAME }} --version-label
+        run : aws elasticbeanstalk update-environment --environment-name ${{ env.EB_ENVIRONMENT_NAME }} --version-label
         
         
       - name: Print Happy message for cd finish
