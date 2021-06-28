@@ -24,6 +24,6 @@ jobs:
                - run: npm test
                - run: npm run test:e2e
                - name: Build docker image
-                     id: build_image 
+                 id: build_image
                - run: | # Build a docker container and
-                    docker build -t notes_app_tag
+                      docker build -t notes_app_tag
