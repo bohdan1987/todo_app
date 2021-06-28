@@ -44,7 +44,7 @@ describe("E2E Tests for NOTE Endpoints", () => {
             .patch("/note/update/5ead5c1a43ace404e06a7408")
             .set("Accept", "application/json")
             .send(note)
-            .expect(HttpStatus.OK);
+            .expect(HttpStatus.NOT_FOUND);
     });
     it("should get all notes", () => {
         return request(app.getHttpServer())
@@ -56,12 +56,12 @@ describe("E2E Tests for NOTE Endpoints", () => {
         return request(app.getHttpServer())
             .get("/note/5ead5c1a43ace404e06a7408")
             .set("Accept", "application/json")
-            .expect(HttpStatus.OK);
+            .expect(HttpStatus.NOT_FOUND);
     });
     it("should delete a note", () => {
         return request(app.getHttpServer())
             .delete("/note/delete/5ead5c1a43ace404e06a7408")
             .set("Accept", "application/json")
-            .expect(HttpStatus.OK);
+            .expect(HttpStatus.NOT_FOUND);
     });
 });
