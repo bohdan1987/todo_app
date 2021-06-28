@@ -23,3 +23,9 @@ jobs:
                - run: npm ci
                - run: npm test
                - run: npm run test:e2e
+          - name: Build docker image
+                id: build_image 
+                run: | # Build a docker container and
+                    # push it to ECR so that it can
+                    # be deployed to ECS.
+                    docker build -t notes_app_tag
