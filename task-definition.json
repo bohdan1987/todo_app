@@ -46,7 +46,7 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "todo-app-container"
+        "name": "todo-app"
       }
     ],
     "placementConstraints": [],
