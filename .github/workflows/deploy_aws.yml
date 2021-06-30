@@ -55,7 +55,7 @@ jobs:
                  id: build-image
                  env:
                       ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-                      ECR_REPOSITORY: todo-app2
+                      ECR_REPOSITORY: todo-app
                       IMAGE_TAG: latest
                  run: |
                       # Build a docker container and
@@ -77,6 +77,6 @@ jobs:
                  uses: aws-actions/amazon-ecs-deploy-task-definition@v1
                  with:
                       task-definition: ${{ steps.task-def.outputs.task-definition }}
-                      service: todo-app
-                      cluster: todo-app
+                      service: todo-app-service
+                      cluster: todo-app-cluster
                       wait-for-service-stability: true
