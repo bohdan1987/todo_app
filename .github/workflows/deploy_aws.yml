@@ -79,6 +79,6 @@ jobs:
                  uses: aws-actions/amazon-ecs-deploy-task-definition@v1
                  with:
                       task-definition: ${{ steps.task-def.outputs.task-definition }}
-                      service: todo-app-service
+                      service: todo-app-service2
                       cluster: todo-app-cluster2
                       wait-for-service-stability: true
