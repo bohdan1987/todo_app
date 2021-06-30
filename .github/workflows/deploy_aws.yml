@@ -78,5 +78,5 @@ jobs:
                  with:
                       task-definition: ${{ steps.task-def.outputs.task-definition }}
                       service: todo-app-service
-                      cluster: todo-app-cluster
+                      cluster: todo-app-cluster2
                       wait-for-service-stability: true
