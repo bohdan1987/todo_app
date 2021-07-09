@@ -45,7 +45,7 @@ jobs:
                  with:
                       aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
                       aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-                      aws-region: eu-central-1
+                      aws-region: eu-west-2
 
                - name: Login to Amazon ECR
                  id: login-ecr
@@ -79,6 +79,6 @@ jobs:
                  uses: aws-actions/amazon-ecs-deploy-task-definition@v1
                  with:
                       task-definition: ${{ steps.task-def.outputs.task-definition }}
-                      service: todo-app-service2
-                      cluster: todo-app-cluster2
+                      service: todo-app-services
+                      cluster: todo-app-cluster
                       wait-for-service-stability: true
