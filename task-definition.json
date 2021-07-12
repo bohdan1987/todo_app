@@ -29,7 +29,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "067471620264.dkr.ecr.eu-west-2.amazonaws.com/todo-app",
+      "image": "067471620264.dkr.ecr.eu-west-2.amazonaws.com/todo-app:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -50,13 +50,13 @@
     }
   ],
   "placementConstraints": [],
-  "memory": "1024",
+  "memory": "2048",
   "taskRoleArn": null,
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:eu-west-2:067471620264:task-definition/todo-app-task:10",
+  "taskDefinitionArn": "arn:aws:ecs:eu-west-2:067471620264:task-definition/todo-app-task:16",
   "family": "todo-app-task",
   "requiresAttributes": [
     {
@@ -89,8 +89,8 @@
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "cpu": "256",
-  "revision": 10,
+  "cpu": "512",
+  "revision": 16,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
